@@ -17,6 +17,12 @@
 
 <body class="bodyPerColab">
 
+    <script>
+        const usuario = JSON.parse(localStorage.getItem("usuarioLogueado"));
+        if (!usuario) {
+            window.location.href = "../../index.html";
+        }
+    </script>
 
     <header>
         <nav>
