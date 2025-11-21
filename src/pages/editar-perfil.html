@@ -2,87 +2,109 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Perfil</title>
 
-    <!-- TUS ESTILOS -->
-    <link rel="stylesheet" href="../styles/normalize.css" />
-    <link rel="stylesheet" href="../styles/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="bodyHojaDeVida">
 
     <nav>
         <div class="logo">
-            <img src="../../img/recursos/sura-logo-white.png" alt="Logo SURA">
+            <img src="../../assets/img/sura-logo-white.png" alt="Logo SURA">
         </div>
         <div class="nav-links">
-            <a href="../../Index.html">Inicio</a>
-            <a href="../Registro/login.html">Iniciar sesion</a>
-            <a href="../Matricula/Estado matricula.html">Inscripciones</a>
-            <a href="../../Index.html">Catálogo</a>
-            <a href="../Comunicaciones/COMUNICACIONES_INT.html">Comunicaciones</a>
-            <a href="../PerColaborador/PerColaborador.html">Perfil del colaborador</a>
-            <a class="nav-link active">EDITAR PERFIL</a>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Buscar...">
-            <i>🔍</i>
+            <a href="../../index.html">Inicio</a>
+            <a href="../Registro/login.html">Iniciar sesión</a>
+            <a href="./perfil.html">Volver al perfil</a>
         </div>
     </nav>
 
     <main class="contenedor">
+        <h1>Editar Perfil del Colaborador</h1>
 
-        <section class="encabezado">
-            <h1>Editar información del perfil</h1>
-        </section>
+        <form id="formEditarPerfil" class="formulario-editar">
 
-        <section class="seccion">
-            <h3 class="seccion_titulo">DATOS EDITABLES</h3>
+            <h3>Datos Personales</h3>
 
-            <form id="formEditarPerfil" class="datosp">
+            <label>Nombre completo</label>
+            <input type="text" id="edit_nombreCompleto">
 
-                <p><strong>Nombre completo:</strong><br>
-                    <input type="text" id="nombreCompleto">
-                </p>
+            <label>Fecha de nacimiento</label>
+            <input type="text" id="edit_fechaNacimiento">
 
-                <p><strong>Correo electrónico:</strong><br>
-                    <input type="email" id="email">
-                </p>
+            <label>Cédula</label>
+            <input type="text" id="edit_cedula">
 
-                <p><strong>Teléfono:</strong><br>
-                    <input type="text" id="telefono">
-                </p>
+            <label>Sexo</label>
+            <input type="text" id="edit_sexo">
 
-                <p><strong>Dirección:</strong><br>
-                    <input type="text" id="direccion">
-                </p>
+            <label>Estado civil</label>
+            <input type="text" id="edit_estadoCivil">
 
-                <p><strong>Perfil Profesional:</strong><br>
-                    <textarea id="perfilProfesional" rows="5"></textarea>
-                </p>
+            <label>Dirección</label>
+            <input type="text" id="edit_direccion">
 
-                <button type="button" class="boton_descargar" disabled>
-                    Guardar cambios (Entrega 3)
-                </button>
+            <label>Teléfono</label>
+            <input type="text" id="edit_telefono">
 
-                <a href="./perfil.html">
-                    <button type="button" class="boton">
-                        Volver al perfil
-                    </button>
-                </a>
-            </form>
-        </section>
+            <label>Correo</label>
+            <input type="email" id="edit_email">
 
+
+            <h3>Perfil Profesional</h3>
+
+            <label>Cargo</label>
+            <input type="text" id="edit_cargo">
+
+            <label>Descripción del perfil profesional</label>
+            <textarea id="edit_perfilProfesional"></textarea>
+
+
+            <h3>Experiencia Laboral</h3>
+
+            <label>Empresa</label>
+            <input type="text" id="edit_exp_empresa">
+
+            <label>Cargo</label>
+            <input type="text" id="edit_exp_cargo">
+
+            <label>Fecha</label>
+            <input type="text" id="edit_exp_fecha">
+
+            <label>Descripción</label>
+            <textarea id="edit_exp_descripcion"></textarea>
+
+
+            <h3>Formación Académica</h3>
+
+            <label>Institución 1</label>
+            <input type="text" id="edit_f1_institucion">
+            <label>Título 1</label>
+            <input type="text" id="edit_f1_titulo">
+            <label>Año 1</label>
+            <input type="number" id="edit_f1_anio">
+
+            <label>Institución 2</label>
+            <input type="text" id="edit_f2_institucion">
+            <label>Título 2</label>
+            <input type="text" id="edit_f2_titulo">
+            <label>Año 2</label>
+            <input type="number" id="edit_f2_anio">
+
+
+            <button type="submit" class="boton">Guardar cambios</button>
+        </form>
     </main>
 
     <footer>
-        <p>© 2025 Campus Corporativo TID – Grupo 5: Perfil Colaborador </p>
+        <p>© 2025 Campus Corporativo TID – Perfil Colaborador</p>
     </footer>
 
     <script type="module" src="../helpers/editarPerfil.js"></script>
-
 </body>
+
 </html>
