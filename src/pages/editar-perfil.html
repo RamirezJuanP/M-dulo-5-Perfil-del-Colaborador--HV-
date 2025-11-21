@@ -4,22 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hoja de Vida</title>
-    <link rel="stylesheet" href="../styles/normalize.css">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <title>Editar Perfil</title>
+
+    <!-- TUS ESTILOS -->
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="bodyHojaDeVida">
-
-
 
     <nav>
         <div class="logo">
             <img src="../../img/recursos/sura-logo-white.png" alt="Logo SURA">
         </div>
-
         <div class="nav-links">
             <a href="../../Index.html">Inicio</a>
             <a href="../Registro/login.html">Iniciar sesion</a>
@@ -27,9 +25,8 @@
             <a href="../../Index.html">Catálogo</a>
             <a href="../Comunicaciones/COMUNICACIONES_INT.html">Comunicaciones</a>
             <a href="../PerColaborador/PerColaborador.html">Perfil del colaborador</a>
-            <a class="nav-link active" aria-current="page" href="./src/pages/hoja-de-vida.html">HOJA DE VIDA</a>
+            <a class="nav-link active">EDITAR PERFIL</a>
         </div>
-
         <div class="search-bar">
             <input type="text" placeholder="Buscar...">
             <i>🔍</i>
@@ -39,145 +36,53 @@
     <main class="contenedor">
 
         <section class="encabezado">
-            <img src="https://www.nicepng.com/png/detail/988-9889381_1024-x-969-0-dibujos-kawaii-de-animales.png"
-                alt="foto de perfil" class="foto_perfil" />
-            <div class="info_encabezado">
-                <h1 id="nombreCompleto">Jaimito Anacleto</h1>
-                <h2 id="cargo">Técnico en Desarrollo de Software</h2>
-            </div>
-
-            <button class="boton">
-                <svg>
-                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 
-                    3.69l-2-2L13.502.646a.5.5 
-                    0 0 1 .707 0l1.293 1.293zm-1.75 
-                    2.456-2-2L4.939 9.21a.5.5 
-                    0 0 0-.121.196l-.805 
-                    2.414a.25.25 0 0 0 
-                    .316.316l2.414-.805a.5.5 
-                    0 0 0 .196-.12l6.813-6.814z" />
-                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 
-                    2.5 15h11a1.5 1.5 0 0 0 
-                    1.5-1.5v-6a.5.5 0 0 
-                    0-1 0v6a.5.5 0 0 
-                    1-.5.5h-11a.5.5 0 0 
-                    1-.5-.5v-11a.5.5 0 0 
-                    1 .5-.5H9a.5.5 0 0 0 
-                    0-1H2.5A1.5 1.5 
-                    0 0 0 1 2.5z" />
-                </svg>
-                Editar
-            </button>
+            <h1>Editar información del perfil</h1>
         </section>
+
         <section class="seccion">
-            <div class="seccion_titulo_con_boton">
-                <h3 class="seccion_titulo">DATOS PERSONALES</h3>
+            <h3 class="seccion_titulo">DATOS EDITABLES</h3>
 
-            </div>
+            <form id="formEditarPerfil" class="datosp">
 
-            <article class="datosp">
-                <p id="nombreCompleto"><strong>Nombre completo:</strong> Jaimito Anacleto</p>
-                <p><strong id="fechaNacimiento">Fecha de nacimiento:</strong> 12 de nov del 2005</p>
-                <p><strong id="cedula">Cédula:</strong> 109856745</p>
-                <p><strong id="sexo">Sexo:</strong> Masculino</p>
-                <p><strong id="estadoCivil">Estado civil:</strong> Soltero</p>
-                <p><strong id="direccion">Dirección:</strong> Debajo del puente</p>
-                <p><strong id="telefono">Teléfono:</strong> 3214613585</p>
-                <p><strong id="email">Correo:</strong> unejemplo@gmail.com</p>
-            </article>
+                <p><strong>Nombre completo:</strong><br>
+                    <input type="text" id="nombreCompleto">
+                </p>
 
-        </section>
-        <section class="seccion">
-            <div class="seccion_titulo_con_boton">
-                <h3 class="seccion_titulo">PERFIL PROFESIONAL</h3>
+                <p><strong>Correo electrónico:</strong><br>
+                    <input type="email" id="email">
+                </p>
 
-            </div>
+                <p><strong>Teléfono:</strong><br>
+                    <input type="text" id="telefono">
+                </p>
 
-            <p id="perfilProfesional">
-                Soy una persona responsable, dedicada y con gran disposición para aprender. Me caracterizo por mi
-                compromiso, la buena actitud y el trabajo en equipo. Tengo conocimientos en el uso de herramientas
-                tecnológicas, ofimáticas y manejo básico de programación, además de facilidad para adaptarme a nuevos
-                entornos.
-                Me interesa seguir desarrollándome profesionalmente en áreas relacionadas con la tecnología, el servicio
-                al cliente y la innovación. Busco aportar mis habilidades a una organización que valore el esfuerzo, la
-                empatía y el crecimiento constante.
-            </p>
+                <p><strong>Dirección:</strong><br>
+                    <input type="text" id="direccion">
+                </p>
 
-        </section>
-        <section class="seccion">
-            <div class="seccion_titulo_con_boton">
-                <h3 class="seccion_titulo">EXPERIENCIA LABORAL</h3>
+                <p><strong>Perfil Profesional:</strong><br>
+                    <textarea id="perfilProfesional" rows="5"></textarea>
+                </p>
 
-            </div>
+                <button type="button" class="boton_descargar" disabled>
+                    Guardar cambios (Entrega 3)
+                </button>
 
-            <p id="experienciaLaboral">
-                Asistente de soporte técnico <br>
-                Suramericana S.A.<br>
-                Junio 2024 – Diciembre 2024<br>
-                Apoyo en la atención de usuarios, registro de incidentes y seguimiento de solicitudes técnicas.
-                Participé en la instalación de software, mantenimiento preventivo de equipos y gestión de reportes.
-                Desarrollé habilidades en comunicación, organización y resolución de problemas técnicos.
-            </p>
-        </section>
-        <section class="seccion">
-            <div class="seccion_titulo_con_boton">
-                <h3 class="seccion_titulo">FORMACIÓN ACADÉMICA</h3>
-
-            </div id="formacionAcademica">
-
-            <ul class="lis">
-                <li><strong>San Pablo</strong> — Bachillerato - 2020</li>
-                <li>
-                    <strong>Lena</strong> — Técnico en Análisis y Desarrollo de Software
-                    - 2025
-                </li>
-            </ul>
+                <a href="./perfil.html">
+                    <button type="button" class="boton">
+                        Volver al perfil
+                    </button>
+                </a>
+            </form>
         </section>
 
-        <section class="seccion" id="historialCursos">
-            <h3 class="seccion_titulo">Historial de cursos</h3>
-                <div class="curso">
-                    <img src="https://segurossura.com/content/uploads/sites/10/2022/09/tigre-sura.jpg" alt="Curso 1">
-                    <h3><strong>Curso de Looker Studio</strong></h3>
-                    <p>100% completado</p>
-                </div>
-
-                <div class="curso">
-                    <img src="https://media.licdn.com/dms/image/v2/D4E12AQGeTJoekYhhhw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1692804214241?e=2147483647&v=beta&t=kQjj8nSFrbGKf8tGEQGhG1ihOsXbYD-oOi9N7PClQJ4"
-                        alt="Curso 2">
-                    <h3><strong>Curso de Pensamiento Lógico</strong></h3>
-                    <p>20% completado</p>
-                </div>
-
-                <div class="curso">
-                    <img src="https://www.conmasfuturo.com/wp-content/uploads/2014/03/scratch11.jpg" alt="Curso 3">
-                    <h3><strong>Curso de WordPress No-Code</strong></h3>
-                    <p>100% completado</p>
-                </div>
-            </div>
-
-        </section>
-
-        <button class="boton_descargar" title="Descargar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-download"
-                viewBox="0 0 16 16">
-                <path
-                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-                <path
-                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
-            </svg>
-
-
-
-        </button>
     </main>
 
     <footer>
-        <p>© 2025 Campus Corporativo TID – Grupo 5:Perfil Colaborador </p>
+        <p>© 2025 Campus Corporativo TID – Grupo 5: Perfil Colaborador </p>
     </footer>
 
-    <script src="../modules/perfilColaborador.js"></script>
+    <script type="module" src="../helpers/editarPerfil.js"></script>
 
 </body>
-
 </html>

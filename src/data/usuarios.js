@@ -1,22 +1,19 @@
 export const usuarios = [
     {
         id: 1,
-        usuario: "jaimito.anacleto",
+        usuario: "jaimito.anacleto@gmail.com",
         password: "1234",
 
-        // Datos personales
         nombreCompleto: "Jaimito Anacleto",
         fechaNacimiento: "12 de noviembre de 2005",
         cedula: "109856745",
         sexo: "Masculino",
         estadoCivil: "Soltero",
 
-        // Contacto
         direccion: "Debajo del puente",
         telefono: "3214613585",
         email: "unejemplo@gmail.com",
 
-        // Perfil profesional
         cargo: "Asistente de soporte técnico",
         perfilProfesional:
             "Soy una persona responsable, dedicada y con gran disposición para aprender. Me caracterizo por mi compromiso, la buena actitud y el trabajo en equipo. Tengo conocimientos en uso de herramientas tecnológicas, ofimática y programación básica. Busco seguir desarrollándome profesionalmente.",
@@ -38,7 +35,7 @@ export const usuarios = [
 
     {
         id: 2,
-        usuario: "maria.lopez",
+        usuario: "maria.lopez@gmail.com",
         password: "abcd1234",
 
         nombreCompleto: "María Fernanda López",
@@ -72,7 +69,7 @@ export const usuarios = [
 
     {
         id: 3,
-        usuario: "carlos.restrepo",
+        usuario: "carlos.restrepo@gmail.com",
         password: "carlos2024",
 
         nombreCompleto: "Carlos Andrés Restrepo",
@@ -106,7 +103,7 @@ export const usuarios = [
 
     {
         id: 4,
-        usuario: "laura.munoz",
+        usuario: "laura.munoz@gmail.com",
         password: "laura2025",
 
         nombreCompleto: "Laura Vanessa Muñoz",
@@ -140,7 +137,7 @@ export const usuarios = [
 
     {
         id: 5,
-        usuario: "sebastian.henao",
+        usuario: "sebastian.henao@gmail.com",
         password: "sebas123",
 
         nombreCompleto: "Sebastián Henao",
