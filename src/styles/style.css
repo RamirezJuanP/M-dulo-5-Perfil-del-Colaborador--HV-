@@ -522,3 +522,341 @@ input[Type="submit"]:hover{
 }
 
 
+
+
+
+/* ============================================
+   CONTENEDOR PRINCIPAL
+============================================ */
+.bodyHojaDeVida {
+    background-color: #eaf4ff !important;
+    font-family: "Arial", sans-serif;
+}
+
+/* Card principal */
+.contenedor {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Título principal */
+.contenedor h1 {
+    text-align: center;
+    color: #0057b7;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Botón de cambiar contraseña */
+.contenedor a button {
+    background-color: #4da3ff;
+    border: none;
+    padding: 10px 18px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+.contenedor a button:hover {
+    background-color: #2f8beb;
+}
+
+/* ============================================
+   FORMULARIO DE EDICIÓN
+============================================ */
+
+.formulario-editar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-editar h3 {
+    background-color: #4da3ff;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+/* Etiquetas */
+.formulario-editar label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #003b80;
+}
+
+/* Inputs y textarea */
+.formulario-editar input,
+.formulario-editar textarea {
+    padding: 10px;
+    border: 1px solid #bcd4ef;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: #f7fbff;
+}
+
+.formulario-editar textarea {
+    min-height: 80px;
+}
+
+/* Inputs focus */
+.formulario-editar input:focus,
+.formulario-editar textarea:focus {
+    outline: none;
+    border-color: #4da3ff;
+    background-color: white;
+    box-shadow: 0 0 6px rgba(77, 163, 255, 0.3);
+}
+
+/* ============================================
+   BOTÓN GUARDAR
+============================================ */
+.boton {
+    margin-top: 20px;
+    background-color: #0077ff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.boton:hover {
+    background-color: #005fca;
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+
+
+
+
+/* ============================================
+   SEGURIDAD: ESTILOS EXCLUSIVOS
+============================================ */
+
+/* Fondo */
+.seguridad-body {
+    background-color: #eaf4ff;
+    font-family: "Arial", sans-serif;
+}
+
+/* NAV */
+.seguridad-nav {
+    background-color: #0057b7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.seguridad-logo img {
+    height: 40px;
+}
+
+.seguridad-links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.seguridad-links a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.seguridad-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Títulos */
+.seguridad-container h1 {
+    text-align: center;
+    color: #0057b7;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.seguridad-container h3 {
+    text-align: center;
+    color: #003b80;
+    margin-bottom: 20px;
+}
+
+/* FORMULARIO */
+.seguridad-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.seguridad-form label {
+    font-weight: bold;
+    color: #003b80;
+}
+
+.seguridad-form input {
+    padding: 10px;
+    border: 1px solid #bcd4ef;
+    border-radius: 6px;
+    background-color: #f7fbff;
+    font-size: 0.95rem;
+}
+
+.seguridad-form input:focus {
+    outline: none;
+    border-color: #4da3ff;
+    background-color: white;
+    box-shadow: 0 0 6px rgba(77, 163, 255, 0.3);
+}
+
+/* Errores */
+.seguridad-error {
+    color: #d9534f;
+    font-size: 0.85rem;
+    margin-top: -8px;
+    height: 14px;
+}
+
+/* Botón */
+.seguridad-btn {
+    background-color: #0077ff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s;
+    margin-top: 10px;
+}
+
+.seguridad-btn:hover {
+    background-color: #005fca;
+}
+
+/* FOOTER */
+.seguridad-footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+
+/* ============================================
+   NAVBAR MEJORADO PARA SEGURIDAD
+============================================ */
+
+.seguridad-nav {
+    background: linear-gradient(90deg, #0057b7, #0077ff);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.seguridad-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.seguridad-nav-logo {
+    height: 42px;
+}
+
+.seguridad-nav-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.seguridad-nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+.seguridad-nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.seguridad-nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+
+/* ============================================
+   NAVBAR PARA EDITAR PERFIL
+============================================ */
+
+.editar-nav {
+    background: linear-gradient(90deg, #004c97, #007bff);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.editar-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.editar-nav-logo {
+    height: 42px;
+}
+
+.editar-nav-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.editar-nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+.editar-nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.25s ease;
+}
+
+.editar-nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
