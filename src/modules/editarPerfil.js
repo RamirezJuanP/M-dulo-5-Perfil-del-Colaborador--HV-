@@ -1,30 +1,33 @@
-
-// PROTECCIÓN: Evitar acceder sin haber iniciado sesión
-
-const usuarioIdActivo = localStorage.getItem("usuarioIdActivo");
-
-if (!usuarioIdActivo) {
-    alert("Debes iniciar sesión para acceder a esta página.");
+// =========================
+// 🔒 PROTECCIÓN DE SESIÓN
+// =========================
+const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
+if (!usuarioLogueado) {
+    Swal.fire("Acceso denegado", "Debes iniciar sesión", "error");
     window.location.href = "../Registro/login.html";
 }
 
 
-// Importar base de datos de usuarios
+// =========================
+// OBTENER LISTA DE USUARIOS DESDE LOCALSTORAGE
+// =========================
+const usuariosLS = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-import { usuarios } from "../data/usuarios.js";
 
-// Obtener el usuario actual
-const id = parseInt(usuarioIdActivo, 10);
-const usuario = usuarios.find(u => u.id === id);
+// =========================
+// OBTENER USUARIO ACTUAL DESDE LA LISTA
+// =========================
+const usuario = usuariosLS.find(u => u.id === usuarioLogueado.id);
 
-// Validación de existencia
 if (!usuario) {
-    alert("Error: No se encontró información del usuario.");
+    Swal.fire("Error", "No se encontró el usuario en la base de datos", "error");
     window.location.href = "./perfil.html";
 }
 
-//PRE-LLENADO DEL FORMULARIO
 
+// =========================
+// PRELLENAR FORMULARIO
+// =========================
 document.getElementById("edit_nombreCompleto").value = usuario.nombreCompleto;
 document.getElementById("edit_fechaNacimiento").value = usuario.fechaNacimiento;
 document.getElementById("edit_cedula").value = usuario.cedula;
@@ -37,13 +40,13 @@ document.getElementById("edit_email").value = usuario.email;
 document.getElementById("edit_cargo").value = usuario.cargo;
 document.getElementById("edit_perfilProfesional").value = usuario.perfilProfesional;
 
-// Experiencia laboral (primer registro)
+// Experiencia laboral
 document.getElementById("edit_exp_empresa").value = usuario.experienciaLaboral[0].empresa;
 document.getElementById("edit_exp_cargo").value = usuario.experienciaLaboral[0].cargo;
 document.getElementById("edit_exp_fecha").value = usuario.experienciaLaboral[0].fecha;
 document.getElementById("edit_exp_descripcion").value = usuario.experienciaLaboral[0].descripcion;
 
-// Formación académica (primer y segundo ítem)
+// Formación académica
 document.getElementById("edit_f1_institucion").value = usuario.formacionAcademica[0].institucion;
 document.getElementById("edit_f1_titulo").value = usuario.formacionAcademica[0].titulo;
 document.getElementById("edit_f1_anio").value = usuario.formacionAcademica[0].año;
@@ -53,13 +56,13 @@ document.getElementById("edit_f2_titulo").value = usuario.formacionAcademica[1].
 document.getElementById("edit_f2_anio").value = usuario.formacionAcademica[1].año;
 
 
-
+// =========================
 // GUARDAR CAMBIOS
-
+// =========================
 document.getElementById("formEditarPerfil").addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Actualizar datos del usuario
+    // Actualizamos usuario
     usuario.nombreCompleto = document.getElementById("edit_nombreCompleto").value;
     usuario.fechaNacimiento = document.getElementById("edit_fechaNacimiento").value;
     usuario.cedula = document.getElementById("edit_cedula").value;
@@ -85,19 +88,28 @@ document.getElementById("formEditarPerfil").addEventListener("submit", (e) => {
     usuario.formacionAcademica[1].titulo = document.getElementById("edit_f2_titulo").value;
     usuario.formacionAcademica[1].año = document.getElementById("edit_f2_anio").value;
 
-    // Guardar usuario actualizado en localStorage
-    localStorage.setItem("usuarioIdActivo", usuario.id);
-    localStorage.setItem("usuarioEditado", JSON.stringify(usuario));
 
-    // Almacenar también el nuevo usuario en el array (opcional)
-    const index = usuarios.findIndex(u => u.id === usuario.id);
-    usuarios[index] = usuario;
+    // =========================
+    // ACTUALIZAR usuarioLogueado
+    // =========================
+    localStorage.setItem("usuarioLogueado", JSON.stringify(usuario));
 
-    // Mostrar mensaje
+    // =========================
+    // ACTUALIZAR LISTA DE USUARIOS
+    // =========================
+    const index = usuariosLS.findIndex(u => u.id === usuario.id);
+    usuariosLS[index] = usuario;
+
+    localStorage.setItem("usuarios", JSON.stringify(usuariosLS));
+
+
+    // =========================
+    // FEEDBACK AL USUARIO
+    // =========================
     Swal.fire({
         icon: "success",
-        title: "Perfil actualizado",
-        text: "Los cambios se han guardado correctamente",
+        title: "¡Perfil actualizado!",
+        text: "Los cambios fueron guardados correctamente.",
         confirmButtonText: "Aceptar"
     }).then(() => {
         window.location.href = "./perfil.html";

@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad - Cambiar Contraseña</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="bodyHojaDeVida">
+
+    <!-- 🔒 PROTECCIÓN DE SESIÓN -->
+    <script>
+        const user = JSON.parse(localStorage.getItem("usuarioLogueado"));
+        if (!user) {
+            window.location.href = "../../index.html";
+        }
+    </script>
+
+    <nav>
+        <div class="logo">
+            <img src="../../assets/img/sura-logo-white.png" alt="Logo SURA">
+        </div>
+
+        <div class="nav-links">
+            <a href="./perfil.html">Volver al perfil</a>
+        </div>
+    </nav>
+
+    <main class="contenedor">
+
+        <h1>Seguridad del Colaborador</h1>
+        <h3>Cambiar Contraseña</h3>
+
+        <!-- FORMULARIO -->
+        <form id="formSeguridad" class="formulario-editar">
+
+            <label>Contraseña actual</label>
+            <input type="password" id="pass_actual">
+            <small id="error_actual" class="error-text"></small>
+
+            <label>Nueva contraseña</label>
+            <input type="password" id="pass_nueva">
+            <small id="error_nueva" class="error-text"></small>
+
+            <label>Confirmar nueva contraseña</label>
+            <input type="password" id="pass_confirmar">
+            <small id="error_confirmar" class="error-text"></small>
+
+            <button type="submit" class="boton">Guardar nueva contraseña</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Campus Corporativo TID – Perfil Colaborador</p>
+    </footer>
+
+    <script type="module" src="../helpers/seguridad.js"></script>
+
+</body>
+
+</html>
